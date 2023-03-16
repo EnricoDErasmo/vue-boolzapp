@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Helvetica, sans-serif;
+}
+
+.view {
+    position: relative;
+    height: 100vh;
+}
+
+/* Background */
+.view .back-green{
+    height: 17%;
+
+    background-color: #009688;
+}
+
+.view .back-grey{
+    height: calc(100% - 17%);
+
+    background-color: #d9dbd5;
+}
+/* /Background */
+
+ul{
+    padding-left: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.small-text{
+    color: grey;
+
+    font-size: 0.7em;
+}
+
+/* Assets */
+
+
+/* Chat window */
+.view .chat-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: row;
+
+    width: 80%;
+    height: 95%;
+
+    background-color: white;
+}
+
+/* Inner left */
+
+.view .chat-window .inner-left{
+    border: 1px solid black;
+    /* Test */
+
+    display: flex;
+    flex-direction: column;
+
+    width: 35%;
+    height: 100%;
+}
+
+/* User section */
+
+.view .chat-window .inner-left .user-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 4px;
+
+    height: 60px;
+
+    background-color: #eaeaea;
+}
+
+.view .chat-window .inner-left .user-sec .user-avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.view .chat-window .inner-left .user-sec .user-avatar #img-container{
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background-color: white;
+}
+
+.view .chat-window .inner-left .user-sec .user-avatar #img-container img{
+    width: 100%;
+}
+
+
+.view .chat-window .inner-left .user-sec .user-icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding-right: 18px;
+
+    font-size: 1.3em;
+    color: #b1b1b1;
+}
+
+.view .chat-window .inner-left .user-sec .user-icons i{
+    cursor: pointer;
+}
+
+/* /User section */
+
+
+/* Notification section */
+
+.view .chat-window .inner-left .not-sec{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding-left: 20px;
+
+    height: 70px;
+
+    background-color: #8edafc;
+
+}
+
+.view .chat-window .inner-left .not-sec .icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: #8edafc;
+
+    font-size: 1.4em;
+}
+
+.view .chat-window .inner-left .not-sec .text-container{
+    font-size: 0.9em;
+}
+
+.view .chat-window .inner-left .not-sec .text-container #link{
+    font-size: 0.9em;
+
+    color: grey;
+}
+
+/* /Notification section */
+
+
+/* Chat search section */
+
+.view .chat-window .inner-left .chat-search{
+    padding: 6px 6px;
+
+    height: 45px ;
+
+    background-color: #fafafa;
+}
+
+.view .chat-window .inner-left .chat-search .input-group-text{
+    color: #b1b1b1;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.view .chat-window .inner-left .chat-search .form-control::placeholder{
+    color: darkgrey;
+
+    font-size: 0.8em;
+}
+
+
+/* /Chat search section */
+
+
+
+/* Chat list */
+
+.view .chat-window .inner-left .chat-list-container{
+    display: flex;
+    flex-direction: column;
+
+    height: calc(100% - 45px - 70px - 60px);
+
+    overflow-y: scroll;
+}
+
+.view .chat-window .inner-left .chat-list-container .chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 6px;
+    padding-right: 20px;
+
+    height: 70px;
+
+    border-bottom: 2px solid #f8f8f8;
+}
+
+.view .chat-window .inner-left .chat-list-container .chat .chat-inner-left{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.view .chat-window .inner-left .chat-list-container .chat .chat-inner-left .img-container{
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.view .chat-window .inner-left .chat-list-container .chat .chat-inner-left .img-container img{
+    width: 100%;
+}
+
+
+
+
+/* /Chat list */
+
+
+
+
+/* /Inner left */
+
+
+/* Inner right */
+
+.view .chat-window .inner-right{
+    border: 1px solid black;
+    /* Test */
+    width: 65%;
+    height: 100%;
+}
+
+/* /Inner right */
