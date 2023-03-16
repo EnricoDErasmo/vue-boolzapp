@@ -61,9 +61,6 @@ li {
 /* Inner left */
 
 .view .chat-window .inner-left{
-    border: 1px solid black;
-    /* Test */
-
     display: flex;
     flex-direction: column;
 
@@ -256,10 +253,38 @@ li {
 /* Inner right */
 
 .view .chat-window .inner-right{
-    border: 1px solid black;
-    /* Test */
+    position: relative;
+
     width: 65%;
     height: 100%;
+
+    border-left: 1px solid #d6d6d6;
 }
+
+.view .chat-window .inner-right .chat-nav{
+    height: 60px;
+
+    background-color: #eaeaea;
+}
+
+.view .chat-window .inner-right .chat-main{
+    height: calc(100% - 60px);
+
+    background-image: url(../img/mine.jpg);
+
+    overflow-y: scroll;
+}
+
+.view .chat-window .inner-right .chat-write-bar{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+
+    width: calc(100% - 35%);
+    height: 60px;
+
+    background-color: #f3eeea;
+}
+
 
 /* /Inner right */
