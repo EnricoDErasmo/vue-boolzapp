@@ -108,18 +108,18 @@
 
                         <ul>
 
-                            <li class="chat-container">
+                            <li v-for="(contact, index) in contacts" class="chat-container">
 
                                 <div class="chat">
 
                                     <div class="chat-inner-left">
 
                                         <div class="img-container">
-                                            <img src="img/avatar_1.jpg" alt="">
+                                            <img :src="contacts[index].avatar" alt="">
                                         </div>
     
                                         <div class="chat-info">
-                                            <div>Michele</div>
+                                            <div> {{contacts[index].name}} </div>
                                             <div class="small-text">Ultimo messaggio inviato</div>
                                         </div>
 
