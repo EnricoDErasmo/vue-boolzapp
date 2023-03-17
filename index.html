@@ -223,7 +223,7 @@
 
                         <div class="write-bar">
 
-                            <input type="text" placeholder="Scrivi un nuovo messaggio">
+                            <input type="text" placeholder="Scrivi un nuovo messaggio" v-model="newMessageSent.message" @keyup.enter="sentMessage(), receiveMessage()">
 
                         </div>
 

@@ -13,6 +13,14 @@ del pannello della conversazione
 
 -Click sul contatto mostra la conversazione del contatto cliccato
 
+Milestone 3
+-Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa 
+e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+
+-Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
+l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+
 */
 
 const { createApp } = Vue
@@ -188,6 +196,22 @@ const { createApp } = Vue
         ],
         
         activeContactIndex: 0,
+
+        newMessageSent:{
+            date: '10/01/2020 15:30:55',
+            message: '',
+            status: 'sent'
+        },
+
+        newMessageReceived: {
+            date: '10/01/2020 15:30:55',
+            message: 'Ok',
+            status: 'received'
+        },
+
+        timer: {},
+
+
       }
     },
 
@@ -196,6 +220,25 @@ const { createApp } = Vue
         changeActiveContactIndex(index){
 
             this.activeContactIndex = index;
+
+        },
+
+        sentMessage(){
+
+            this.contacts[this.activeContactIndex].messages.push(this.newMessageSent);
+
+            this.newMessageSent = {date: '10/01/2020 15:30:55', message: '', status: 'sent'}
+
+        },
+
+        receiveMessage() {
+
+            this.timer = setTimeout(()=>{
+
+                this.contacts[this.activeContactIndex].messages.push(this.newMessageReceived);
+    
+            }, 1000);
+
 
         },
 
