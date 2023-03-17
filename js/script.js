@@ -215,6 +215,7 @@ const { createApp } = Vue
 
         timer: {},
 
+        searchChat: "",
 
       }
     },
@@ -245,6 +246,22 @@ const { createApp } = Vue
     
             }, 1000);
 
+        },
+
+        chatVisibility() {
+
+            this.contacts.forEach((contact) => {
+
+                if (contact.name.toLowerCase().includes(this.searchChat.toLowerCase())) {
+
+                    contact.visible = true;
+
+                } else {
+
+                    contact.visible = false;
+                }
+
+            });
         },
 
     },
