@@ -338,7 +338,7 @@ li {
     padding-left: 70px;
     padding-right: 70px;
 
-    height: calc(100% - 60px);
+    height: calc(100% - 60px - 60px);
 
     background-image: url(../img/mine.jpg);
 

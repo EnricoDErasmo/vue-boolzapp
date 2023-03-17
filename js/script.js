@@ -20,6 +20,10 @@ e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio 
 -Risposta dall’interlocutore: ad ogni inserimento di un messaggio, 
 l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
+Milestone 4
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra,
+vengono visualizzati solo i contatti il cui nome contiene le lettere inserite 
+(es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
 
 */
 
@@ -229,6 +233,8 @@ const { createApp } = Vue
 
             this.newMessageSent = {date: '10/01/2020 15:30:55', message: '', status: 'sent'}
 
+            this.receiveMessage();
+
         },
 
         receiveMessage() {
@@ -238,7 +244,6 @@ const { createApp } = Vue
                 this.contacts[this.activeContactIndex].messages.push(this.newMessageReceived);
     
             }, 1000);
-
 
         },
 
