@@ -108,18 +108,18 @@
 
                         <ul>
 
-                            <li v-for="(contact, index) in contacts" class="chat-container">
+                            <li v-for="(contact, index) in contacts" :class="index == activeContactIndex ? 'active' : '' " class="chat-container" @click="changeActiveContactIndex(index)">
 
-                                <div class="chat">
+                                <div  class="chat">
 
                                     <div class="chat-inner-left">
 
                                         <div class="img-container">
-                                            <img :src="contacts[index].avatar" alt="">
+                                            <img :src="contact.avatar" alt="">
                                         </div>
     
                                         <div class="chat-info">
-                                            <div> {{contacts[index].name}} </div>
+                                            <div> {{contact.name}} </div>
                                             <div class="small-text">Ultimo messaggio inviato</div>
                                         </div>
 
@@ -161,11 +161,11 @@
                         <div class="chat-nav-left">
 
                             <div class="img-container">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="contacts[activeContactIndex].avatar" alt="">
                             </div>
                             
                             <div class="chat-info">
-                                <div>Michele</div>
+                                <div> {{contacts[activeContactIndex].name}} </div>
                                 <div class="small-text">Ultimo accesso oggi alle 12:00</div>
                             </div>
                             
@@ -188,68 +188,27 @@
 
                     <!-- Chat main -->
 
-                    <div class="chat-main">
+                    <div  class="chat-main">
 
-                        <div class="row-sent">
+                        <div v-for="message in contacts[activeContactIndex].messages" class="row">
 
-                            <div class="message-box sent">
+                            <div :class="message.status" class="message-box">
     
                                 <div class="message-text">
-    
-                                    Hai portato a spasso il cane?
+
+                                    {{message.message}}
     
                                 </div>
     
                                 <div class="message-hour">
     
-                                    15:30
+                                    {{message.date}}
     
                                 </div>
     
                             </div>
 
                         </div>
-
-                        <div class="row-sent">
-
-                            <div class="message-box sent">
-    
-                                <div class="message-text">
-    
-                                    Hai portato a spasso il cane?
-    
-                                </div>
-    
-                                <div class="message-hour">
-    
-                                    15:30
-    
-                                </div>
-    
-                            </div>
-                            
-                        </div>
-
-                        <div class="row-received">
-
-                            <div class="message-box received">
-    
-                                <div class="message-text">
-    
-                                    Hai portato a spasso il cane?
-    
-                                </div>
-    
-                                <div class="message-hour">
-    
-                                    15:30
-    
-                                </div>
-    
-                            </div>
-                            
-                        </div>
-
 
                     </div>
 

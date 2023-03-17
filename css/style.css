@@ -26,7 +26,7 @@
 /* /Background */
 
 ul{
-    padding-left: 10px;
+    padding-left: 0px;
 
     margin-bottom: 0;
 }
@@ -219,12 +219,25 @@ li {
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 8px;
-    padding-right: 20px;
+    padding: 8px 20px;
+    
 
     height: 70px;
 
     border-bottom: 2px solid #f8f8f8;
+
+    cursor: pointer;
+}
+
+.view .chat-window .inner-left .chat-list-container .chat:hover{
+
+    background-color: #e9ebeb;
+
+}
+
+.view .chat-window .inner-left .chat-list-container .chat-container.active{
+
+    background-color: #e9ebeb;
 }
 
 .view .chat-window .inner-left .chat-list-container .chat .chat-inner-left{
@@ -332,18 +345,9 @@ li {
     overflow-y: scroll;
 }
 
-.view .chat-window .inner-right .chat-main .row-sent{
+.view .chat-window .inner-right .chat-main .row{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    margin-bottom: 8px;
-}
-
-.view .chat-window .inner-right .chat-main .row-received{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
 
     margin-bottom: 8px;
 }
@@ -358,6 +362,7 @@ li {
 
     height: 50px;
     width: 300px;
+    max-width: 60%;
 
     border-radius: 10px;
 }
@@ -375,12 +380,14 @@ li {
 .view .chat-window .inner-right .chat-main .sent{
 
     background-color: #d5f9ba;
+    align-self: flex-end;
 
 }
 
 .view .chat-window .inner-right .chat-main .received{
 
     background-color: white;
+    align-self: flex-start;
 }
 
 /* /Chat main */
