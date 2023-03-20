@@ -120,7 +120,7 @@
     
                                         <div class="chat-info">
                                             <div> {{contact.name}} </div>
-                                            <div class="small-text">Ultimo messaggio inviato</div>
+                                            <div class="small-text">{{}}</div>
                                         </div>
 
                                     </div>
@@ -190,9 +190,9 @@
 
                     <div  class="chat-main">
 
-                        <div v-for="message in contacts[activeContactIndex].messages" class="row">
+                        <div v-for="(message, index) in contacts[activeContactIndex].messages" class="row">
 
-                            <div :class="message.status" class="message-box">
+                            <div :class="message.status" class="message-box" @click="visibilityMessageMenu(index)">
     
                                 <div class="message-text">
 
@@ -201,12 +201,17 @@
                                 </div>
     
                                 <div class="message-hour">
-    
+                                    
                                     {{message.date}}
-    
+                                    
                                 </div>
-    
+                                
+                                <div class="message-menu" v-show="contacts[activeContactIndex].messages[index].showMessageMenu">
+                                    <div class="choose">Message info</div>
+                                    <div @click="deleteMessage(index)" class="choose">Delete message</div>
+                                </div>
                             </div>
+
 
                         </div>
 

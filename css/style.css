@@ -352,6 +352,37 @@ li {
     margin-bottom: 8px;
 }
 
+.view .chat-window .inner-right .chat-main .row .message-menu{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    
+    display: flex;
+    flex-direction: column;
+
+    width: 140px;
+
+    font-size: 0.8em;
+
+    background-color: #ffffff;
+
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+
+    z-index: 2;
+}
+
+.view .chat-window .inner-right .chat-main .row .message-menu .choose{
+    padding: 8px 18px;
+
+    cursor: pointer;
+}
+
+.view .chat-window .inner-right .chat-main .row .message-menu .choose:hover{
+    background-color: #d6d6d6;
+}
+
+
+
 .view .chat-window .inner-right .chat-main .message-box{
     position: relative;
 
