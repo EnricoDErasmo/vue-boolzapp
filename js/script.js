@@ -239,10 +239,29 @@ const { createApp } = Vue
         timer: {},
 
         searchChat: "",
-      }
-    },
+
+        hour : "",
+
+    }
+    
+    
+},
 
     methods: {
+
+        getHour() {
+
+            const today = new Date();
+
+            const newHour = Intl.DateTimeFormat("it-IT", {
+
+                hour: "numeric",
+                minute: "numeric",
+
+            }).format(today);
+
+
+        },
 
         changeActiveContactIndex(index){
 

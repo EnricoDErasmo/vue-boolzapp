@@ -120,13 +120,13 @@
     
                                         <div class="chat-info">
                                             <div> {{contact.name}} </div>
-                                            <div class="small-text">{{}}</div>
+                                            <div class="small-text">{{contact.messages[contact.messages.length - 1].message}}</div>
                                         </div>
 
                                     </div>
 
                                     <div class="chat-inner-right">
-                                        <div class="small-text">12:00</div>
+                                        <div class="small-text">{{contact.messages[contact.messages.length - 1].date}}</div>
                                     </div>
 
                                 </div>
